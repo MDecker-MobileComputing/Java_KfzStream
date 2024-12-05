@@ -2,7 +2,7 @@ package de.eldecker.kfzstream;
 
 
 /**
- * Rekort-Klasse für Kraftfahrzeuge.
+ * Record-Klasse für Kraftfahrzeuge.
  * 
  * @param kennzeichen KFZ-Kennzeichen, z.B. "KA-X 1234"
  * 
