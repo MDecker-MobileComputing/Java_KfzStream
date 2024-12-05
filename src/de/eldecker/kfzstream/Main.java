@@ -1,19 +1,27 @@
 package de.eldecker.kfzstream;
 
+import java.util.Comparator;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 
+/**
+ * Hauptklasse. 
+ */
 public class Main {
 
 	/** Implementierung für Terminal-Operation von {@link Kfz}-Stream. */
 	private static final Consumer<Kfz> KFZ_VERBRAUCHER = kfz -> { System.out.println( kfz ); };
 	
+	/** Objekt zum Vergleich von zwei {@link Kfz}-Objekten, wird zum Sortieren benötigt. */ 
+	private static final Comparator<Kfz> KFZ_VERGLEICHER = 
+			(kfz1,kfz2) -> kfz1.kennzeichen().compareTo( kfz2.kennzeichen() );
+	
 	
 	/**
 	 * Methode erzeugt Stream mit Kfz-Objekten. 
 	 * 
-	 * @return Stream mit {@link Kfz}-Objekten mit 
+	 * @return Stream mit {@link Kfz}-Objekten mit Kennzeichen und PS.
 	 */
 	private static Stream<Kfz> getKfzStream() {
 
@@ -37,12 +45,7 @@ public class Main {
 				
 		final Stream<Kfz> kfzStream = getKfzStream();
 		
-		kfzStream.filter( 
-					k -> k.kennzeichen().startsWith( "KA" )
-					&&
-					k.ps() >= 200 )
-				//.sorted( )
-				.forEach( KFZ_VERBRAUCHER );		
+		kfzStream.forEach( KFZ_VERBRAUCHER );		
 	}
 	
 }
