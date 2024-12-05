@@ -24,7 +24,7 @@ public class Main {
 	 * @return Stream mit {@link Kfz}-Objekten mit Kennzeichen und PS.
 	 */
 	private static Stream<Kfz> getKfzStream() {
-
+		
 		return Stream.of(
 							new Kfz( "KA-Z 988" , 220 ),
 							new Kfz( "KA-AB 901", 80  ),
@@ -42,7 +42,9 @@ public class Main {
 	 * @param args Wird nicht ausgewertet.
 	 */
 	public static void main( String[] args ) {
-				
+
+		System.out.println();
+		
 		final Stream<Kfz> kfzStream = getKfzStream();
 		
 		kfzStream.forEach( KFZ_VERBRAUCHER );		
