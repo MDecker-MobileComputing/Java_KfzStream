@@ -2,11 +2,11 @@ package de.eldecker.kfzstream;
 
 
 /**
- * Objekte für Kraftfahrzeuge.
+ * Rekort-Klasse für Kraftfahrzeuge.
  * 
  * @param kennzeichen KFZ-Kennzeichen, z.B. "KA-X 1234"
  * 
- * @param ps Pferdesträrken des Autos
+ * @param ps Pferdestärken des Autos (1PS ca. 735,5 Watt)
  */
 public record Kfz( String kennzeichen, 
 		           int ps ) {}
