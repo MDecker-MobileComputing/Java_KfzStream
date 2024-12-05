@@ -9,4 +9,4 @@ package de.eldecker.kfzstream;
  * @param ps Leistung des Motors in Pferdestärken (1PS ca. 735,5 Watt)
  */
 public record Kfz( String kennzeichen, 
-		           int ps ) {}
+		           int    ps ) {}
