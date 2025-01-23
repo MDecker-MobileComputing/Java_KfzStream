@@ -47,9 +47,10 @@ public class Main {
 
         final Stream<Kfz> kfzStream = getKfzStream();
 
-        kfzStream.filter( k -> k.ps() >= 200 
-        		               &&
-        		               k.kennzeichen().startsWith("KA")
+        kfzStream.filter( 
+        
+        
+        
         		        ) 
                  .sorted(  KFZ_VERGLEICHER )
                  .forEach( KFZ_VERBRAUCHER );                 
