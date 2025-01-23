@@ -1,4 +1,4 @@
-# Stream-Verarbeitung mit Java #
+# Stream-Verarbeitung mit Java: KFZ-Kennzeichen & PS #
 
 <br>
 
